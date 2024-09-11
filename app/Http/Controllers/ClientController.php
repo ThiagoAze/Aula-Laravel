@@ -16,7 +16,7 @@ class ClientController extends Controller
         $clients = Client::get(); //Client foi criada a partir da migration, representa a tabela
         //:: - quer dizer que será estatico
         //dd($clients);
-        
+
         //Mostrar um front-end listando os clientes
         return view('clients.index', ['clients' => $clients]); //O ponto separa a pasta do arquivo
         //1.localização dos arquivos html  2.dados do arquivo html
@@ -41,9 +41,15 @@ class ClientController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $id) //Visualizar um dado especifico
     {
-        //
+        //Buscar o cliente pelo id no banco de dados
+        $client = Client::find($id);
+
+        //Retornar os dados do cliente em uma view (show)
+        return view('clients.show', [
+            'client' => $client //Client no singular porque irá retornar somente um
+        ]);
     }
 
     /**

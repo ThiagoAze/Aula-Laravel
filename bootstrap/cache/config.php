@@ -1,8 +1,8 @@
 <?php return array (
-  0 => 'hashing',
-  9 => 'broadcasting',
-  10 => 'view',
-  11 => 'cors',
+  2 => 'broadcasting',
+  4 => 'cors',
+  7 => 'hashing',
+  13 => 'view',
   'app' => 
   array (
     'name' => 'Laravel',
@@ -638,23 +638,6 @@
     'same_site' => 'lax',
     'partitioned' => false,
   ),
-  'hashing' => 
-  array (
-    'driver' => 'bcrypt',
-    'bcrypt' => 
-    array (
-      'rounds' => '12',
-      'verify' => true,
-    ),
-    'argon' => 
-    array (
-      'memory' => 65536,
-      'threads' => 1,
-      'time' => 4,
-      'verify' => true,
-    ),
-    'rehash_on_login' => true,
-  ),
   'broadcasting' => 
   array (
     'default' => 'log',
@@ -711,14 +694,6 @@
       ),
     ),
   ),
-  'view' => 
-  array (
-    'paths' => 
-    array (
-      0 => '/Volumes/THI-FACUL/4°Semestre/Laravel/aula/resources/views',
-    ),
-    'compiled' => '/Volumes/THI-FACUL/4°Semestre/Laravel/aula/storage/framework/views',
-  ),
   'cors' => 
   array (
     'paths' => 
@@ -746,6 +721,31 @@
     ),
     'max_age' => 0,
     'supports_credentials' => false,
+  ),
+  'hashing' => 
+  array (
+    'driver' => 'bcrypt',
+    'bcrypt' => 
+    array (
+      'rounds' => '12',
+      'verify' => true,
+    ),
+    'argon' => 
+    array (
+      'memory' => 65536,
+      'threads' => 1,
+      'time' => 4,
+      'verify' => true,
+    ),
+    'rehash_on_login' => true,
+  ),
+  'view' => 
+  array (
+    'paths' => 
+    array (
+      0 => '/Volumes/THI-FACUL/4°Semestre/Laravel/aula/resources/views',
+    ),
+    'compiled' => '/Volumes/THI-FACUL/4°Semestre/Laravel/aula/storage/framework/views',
   ),
   'tinker' => 
   array (

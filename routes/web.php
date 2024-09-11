@@ -8,7 +8,8 @@ Route::get('/', function () {
 });
 
 /*Passado o array com SiteController::class e o local que deve localizar */
-Route::get('/clients', [ClientController::class, 'index']); 
+Route::get('/clients', [ClientController::class, 'index'])->name('clients.index');
+Route::get('clients/{id}', [ClientController::class, 'show'])->name('clients.show');
 
 // Route::get('/produto/{id}', function (int $id) { /* Pegando parametro id como inteiro */
 //     dd($id);
