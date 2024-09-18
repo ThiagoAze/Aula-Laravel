@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ProdutoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,6 +12,7 @@ Route::get('/', function () {
 Route::get('/clients', [ClientController::class, 'index'])->name('clients.index');
 Route::get('clients/{id}', [ClientController::class, 'show'])->name('clients.show');
 
+Route::get('/produtos', [ProdutoController::class, 'index'])->name('produto.index');
 // Route::get('/produto/{id}', function (int $id) { /* Pegando parametro id como inteiro */
 //     dd($id);
 // });
