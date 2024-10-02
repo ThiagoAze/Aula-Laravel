@@ -10,9 +10,12 @@ Route::get('/', function () {
 
 /*Passado o array com SiteController::class e o local que deve localizar */
 Route::get('/clients', [ClientController::class, 'index'])->name('clients.index');
+Route::get('/clients/create', [ClientController::class, 'create'])->name('clients.create');
 Route::get('clients/{id}', [ClientController::class, 'show'])->name('clients.show');
-
 Route::get('/produtos', [ProdutoController::class, 'index'])->name('produto.index');
+
+Route::post('/clients', [ClientController::class, 'store'])->name('clients.store');
+
 // Route::get('/produto/{id}', function (int $id) { /* Pegando parametro id como inteiro */
 //     dd($id);
 // });
