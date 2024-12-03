@@ -10,6 +10,7 @@
         <p><strong>Nome: {{$client->nome}}</strong></p>
         <p><strong>Endereço: {{$client->endereco}}</strong></p>
         <p><strong>Observação: {{$client->observacao}}</strong></p>
+        <p><img src=" {{ asset('/'. $client->avatar) }}" alt="Avatar" width="200"></p>
         <br>
         <a class="btn btn-success" href="{{route('clients.index')}}">Voltar</a>
     </div>
